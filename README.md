@@ -17,7 +17,7 @@
 * Use `ldp.exe` to verify that SSL / TLS connection can be made to `prokofiev:636`
 * Use `openssl.exe` to verify:
     ```
-    openssl.exe s_client -debug -CAfile ./ca_certificate.pem -connect localhost:636 -tls1_2 2>&1 | Out-File -Encoding ascii -LiteralPath openssl-output.txt
+    openssl.exe s_client -debug -CAfile ./certs/ca_certificate.pem -connect localhost:636 -tls1_2 2>&1 | Out-File -Encoding ascii -LiteralPath openssl-output.txt
     ```
 * Use `tls_client.erl` to verify:
     ```
