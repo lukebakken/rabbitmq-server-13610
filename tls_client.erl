@@ -13,7 +13,9 @@ start(Host, Port) when is_integer(Port) ->
     ssl:start(),
     logger:set_application_level(ssl, debug),
     SslOpts = [
-        {verify, verify_none}
+        {cacertfile, "./certs/ca_certificate.pem"},
+        {verify, verify_peer},
+        {versions, ['tlsv1.2']}
     ],
     io:format("[INFO] ssl:versions: ~p~n", [ssl:versions()]),
     ok = io:format("[INFO] before ssl:connect~n", []),
