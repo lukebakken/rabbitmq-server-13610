@@ -3,6 +3,16 @@
 * OS - Windows 11 24H2, build 26100.3476
 * Erlang - 27.3
 * Active Directory Lightweight DS
+* OpenSSL version:
+    ```
+    C:\Users\lbakken\development\lukebakken\rabbitmq-server-13610 [main ≡]
+    > erl.exe
+    Erlang/OTP 27 [erts-15.2.3] [source] [64-bit] [smp:16:16] [ds:16:16:10] [async-threads:1] [jit:ns]
+
+    Eshell V15.2.3 (press Ctrl+G to abort, type help(). for help)
+    1> crypto:info_lib().
+    [{<<"OpenSSL">>,806354944,<<"OpenSSL 3.1.0 14 Mar 2023">>}]
+    ```
 
 # Setup
 
